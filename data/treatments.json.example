@@ -1,0 +1,9 @@
+[
+  {
+    "disease": "EUS",
+    "symptoms": ["skin lesion"],
+    "treatment": "Replace this example with a verified treatment protocol.",
+    "conditions": ["Add water-quality conditions here."],
+    "environmental_impact": 0.0
+  }
+]

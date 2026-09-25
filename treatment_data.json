@@ -1,0 +1,42 @@
+{
+  "Bacterial Red disease": {
+    "mild": [{"text": "Improve water quality, salt bath, monitor.", "efficacy": 0.55, "environmental_impact": 0.1}],
+    "moderate": [{"text": "Antibacterial medication (Furan-2), isolate fish.", "efficacy": 0.8, "environmental_impact": 0.55}],
+    "severe": [{"text": "Isolate, systemic antibiotics, veterinary consultation.", "efficacy": 0.9, "environmental_impact": 0.7}]
+  },
+  "Bacterial diseases - Aeromoniasis": {
+    "mild": [{"text": "Improve water quality, water change, and monitor.", "efficacy": 0.6, "environmental_impact": 0.1}],
+    "moderate": [{"text": "Antibacterial treatment and isolate fish.", "efficacy": 0.8, "environmental_impact": 0.55}],
+    "severe": [{"text": "Isolate immediately and consult a veterinarian about treatment.", "efficacy": 0.9, "environmental_impact": 0.7}]
+  },
+  "Bacterial gill disease": {
+    "mild": [{"text": "Improve aeration, reduce stocking density, and monitor.", "efficacy": 0.55, "environmental_impact": 0.05}],
+    "moderate": [{"text": "Improve filtration, reduce ammonia, and seek veterinary guidance.", "efficacy": 0.75, "environmental_impact": 0.5}],
+    "severe": [{"text": "Isolate fish and consult a veterinarian.", "efficacy": 0.85, "environmental_impact": 0.65}]
+  },
+  "EUS": {
+    "mild": [{"text": "Improve water quality, monitor ulcers, and seek expert guidance.", "efficacy": 0.5, "environmental_impact": 0.1}],
+    "moderate": [{"text": "Isolate fish, improve water quality, and consult a veterinarian.", "efficacy": 0.78, "environmental_impact": 0.6}],
+    "severe": [{"text": "Isolate fish and use veterinarian-guided treatment.", "efficacy": 0.9, "environmental_impact": 0.75}]
+  },
+  "Fungal diseases Saprolegniasis": {
+    "mild": [{"text": "Improve circulation, reduce organic waste, and monitor.", "efficacy": 0.6, "environmental_impact": 0.2}],
+    "moderate": [{"text": "Isolate fish and consult a veterinarian about antifungal treatment.", "efficacy": 0.78, "environmental_impact": 0.5}],
+    "severe": [{"text": "Isolate fish, sterilize equipment, and seek veterinary care.", "efficacy": 0.88, "environmental_impact": 0.65}]
+  },
+  "Healthy Fish": {
+    "mild": [{"text": "No disease treatment indicated; continue monitoring.", "efficacy": 1.0, "environmental_impact": 0.0}],
+    "moderate": [{"text": "No disease treatment indicated; continue monitoring.", "efficacy": 1.0, "environmental_impact": 0.0}],
+    "severe": [{"text": "No disease treatment indicated; continue monitoring.", "efficacy": 1.0, "environmental_impact": 0.0}]
+  },
+  "Parasitic diseases": {
+    "mild": [{"text": "Monitor fish, improve water quality, and seek expert guidance.", "efficacy": 0.55, "environmental_impact": 0.1}],
+    "moderate": [{"text": "Consult a veterinarian about an antiparasitic treatment.", "efficacy": 0.78, "environmental_impact": 0.5}],
+    "severe": [{"text": "Isolate fish and seek veterinary care promptly.", "efficacy": 0.88, "environmental_impact": 0.65}]
+  },
+  "Viral diseases White tail disease": {
+    "mild": [{"text": "Improve water quality, reduce stress, and isolate to monitor.", "efficacy": 0.4, "environmental_impact": 0.05}],
+    "moderate": [{"text": "Provide supportive care, isolate fish, and disinfect equipment.", "efficacy": 0.5, "environmental_impact": 0.3}],
+    "severe": [{"text": "Isolate fish, prevent spread, and consult a veterinarian.", "efficacy": 0.55, "environmental_impact": 0.35}]
+  }
+}

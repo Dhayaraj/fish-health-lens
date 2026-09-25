@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start API",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/uvicorn",
+      "args": ["api.main:app", "--reload"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start frontend",
+      "type": "shell",
+      "command": "python3",
+      "args": ["-m", "http.server", "5500", "--directory", "frontend"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Fish Health Lens",
+      "dependsOn": ["Start API", "Start frontend"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}

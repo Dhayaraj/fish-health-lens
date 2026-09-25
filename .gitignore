@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+data/classify/
+data/test/
+data/raw/
+data/detect/data.yaml
+data/severity.csv
+data/treatments.json
+model/sam2_hiera_small.pt

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fish Health Lens</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="mark" aria-hidden="true">FH</div>
+        <div>
+          <p class="eyebrow">Aquatic health lab</p>
+          <h1>Fish Health Lens</h1>
+        </div>
+        <span class="status-pill"><span class="status-dot"></span>Model ready</span>
+      </header>
+
+      <section class="intro">
+        <p class="kicker">Image classification</p>
+        <h2>Read the visual signs<br><em>before they spread.</em></h2>
+        <p class="lede">Upload a clear fish image to get a possible disease class, confidence scores, and a visual explanation of where the model looked.</p>
+      </section>
+
+      <section class="workspace">
+        <div class="upload-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-label">01 / Add an image</p>
+              <h3>Inspect a fish</h3>
+            </div>
+            <span class="format-note">JPG · PNG · WEBP</span>
+          </div>
+          <label class="dropzone" id="dropzone" for="image-input">
+            <input id="image-input" type="file" accept="image/jpeg,image/png,image/webp,image/bmp">
+            <div class="drop-icon" aria-hidden="true">+</div>
+            <strong>Drop a fish image here</strong>
+            <span>or choose a file from your computer</span>
+          </label>
+          <div class="preview-wrap hidden" id="preview-wrap">
+            <img id="preview" alt="Selected fish preview">
+            <button class="text-button" id="remove-button" type="button">Remove image</button>
+          </div>
+          <button class="analyze-button" id="analyze-button" type="button" disabled>
+            <span>Analyze image</span><span aria-hidden="true">&#8594;</span>
+          </button>
+          <p class="error-message hidden" id="error-message"></p>
+        </div>
+
+        <div class="result-panel" id="result-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-label">02 / Model readout</p>
+              <h3>Possible result</h3>
+            </div>
+            <span class="result-state" id="result-state">Waiting</span>
+          </div>
+          <div class="empty-state" id="empty-state">
+            <div class="scan-mark" aria-hidden="true"></div>
+            <p>Your prediction will appear here.</p>
+          </div>
+          <div class="result-content hidden" id="result-content">
+            <p class="result-label">Top match</p>
+            <h4 id="disease-name">--</h4>
+            <div class="confidence-row">
+              <span>Confidence</span><strong id="confidence-value">--</strong>
+            </div>
+            <div class="meter"><span id="confidence-meter"></span></div>
+            <p class="caution">This is a model prediction, not a veterinary diagnosis.</p>
+            <div class="extra-result" id="extra-result">
+              <div><span>Experimental severity</span><strong id="severity-value">--</strong></div>
+              <div><span>Suggested next step</span><strong id="treatment-value">--</strong></div>
+            </div>
+            <div class="scores" id="scores"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="explanation-section hidden" id="explanation-section">
+        <div class="section-heading">
+          <div>
+            <p class="panel-label">03 / Visual explanation</p>
+            <h3>Where the model looked</h3>
+          </div>
+          <span class="format-note">Grad-CAM++</span>
+        </div>
+        <div class="explanation-grid">
+          <figure><img id="heatmap" alt="Grad-CAM++ heatmap overlay"><figcaption>Highlighted regions influenced the prediction most.</figcaption></figure>
+          <div class="explanation-note"><span class="note-number">i</span><p>Use the heatmap as a review aid. A strong highlight does not prove that a disease is present.</p></div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

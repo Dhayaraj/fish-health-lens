@@ -1,0 +1,9 @@
+path: data/detect
+train: images/train
+val: images/val
+test: images/test
+
+# Replace these names with the object classes in your bounding-box annotations.
+names:
+  0: fish
+  1: lesion

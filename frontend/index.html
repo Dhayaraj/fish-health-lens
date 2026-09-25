@@ -11,23 +11,36 @@
       <header class="topbar">
         <div class="mark" aria-hidden="true">FH</div>
         <div>
-          <p class="eyebrow">Aquatic health lab</p>
+          <p class="eyebrow">Student project prototype</p>
           <h1>Fish Health Lens</h1>
         </div>
-        <span class="status-pill"><span class="status-dot"></span>Model ready</span>
+        <span class="status-pill"><span class="status-dot"></span>System ready</span>
       </header>
 
       <section class="intro">
-        <p class="kicker">Image classification</p>
+        <p class="kicker">Velammal Institute of Technology - CSE</p>
         <h2>Read the visual signs<br><em>before they spread.</em></h2>
-        <p class="lede">Upload a clear fish image to get a possible disease class, confidence scores, and a visual explanation of where the model looked.</p>
+        <p class="lede">Upload a fish image to classify it into one of the trained disease categories. The system also shows confidence scores and an estimated severity level.</p>
+      </section>
+
+      <section class="project-info">
+        <div>
+          <p class="panel-label">Project information</p>
+          <h3>Fish disease detection using deep learning</h3>
+        </div>
+        <div class="project-details">
+          <span><b>Model</b>DINOv2 classifier</span>
+          <span><b>Classes</b>8 disease categories</span>
+          <span><b>Dataset</b>3,200 training · 303 test images</span>
+          <span><b>Backend</b>FastAPI</span>
+        </div>
       </section>
 
       <section class="workspace">
         <div class="upload-panel">
           <div class="panel-heading">
             <div>
-              <p class="panel-label">01 / Add an image</p>
+              <p class="panel-label">Step 1: Upload image</p>
               <h3>Inspect a fish</h3>
             </div>
             <span class="format-note">JPG · PNG · WEBP</span>
@@ -51,7 +64,7 @@
         <div class="result-panel" id="result-panel">
           <div class="panel-heading">
             <div>
-              <p class="panel-label">02 / Model readout</p>
+              <p class="panel-label">Step 2: Prediction result</p>
               <h3>Possible result</h3>
             </div>
             <span class="result-state" id="result-state">Waiting</span>
@@ -61,7 +74,7 @@
             <p>Your prediction will appear here.</p>
           </div>
           <div class="result-content hidden" id="result-content">
-            <p class="result-label">Top match</p>
+            <p class="result-label">Predicted class</p>
             <h4 id="disease-name">--</h4>
             <div class="confidence-row">
               <span>Confidence</span><strong id="confidence-value">--</strong>
@@ -69,7 +82,7 @@
             <div class="meter"><span id="confidence-meter"></span></div>
             <p class="caution">This is a model prediction, not a veterinary diagnosis.</p>
             <div class="extra-result" id="extra-result">
-              <div><span>Experimental severity</span><strong id="severity-value">--</strong></div>
+              <div><span>Estimated severity</span><strong id="severity-value">--</strong></div>
               <div><span>Suggested next step</span><strong id="treatment-value">--</strong></div>
             </div>
             <div class="scores" id="scores"></div>
@@ -80,7 +93,7 @@
       <section class="explanation-section hidden" id="explanation-section">
         <div class="section-heading">
           <div>
-            <p class="panel-label">03 / Visual explanation</p>
+            <p class="panel-label">Step 3: Model explanation</p>
             <h3>Where the model looked</h3>
           </div>
           <span class="format-note">Grad-CAM++</span>
@@ -90,6 +103,10 @@
           <div class="explanation-note"><span class="note-number">i</span><p>Use the heatmap as a review aid. A strong highlight does not prove that a disease is present.</p></div>
         </div>
       </section>
+      <footer class="project-footer">
+        Developed as an academic project at Velammal Institute of Technology.<br>
+        This system is for educational use and is not a veterinary diagnostic tool.
+      </footer>
     </main>
     <script src="app.js"></script>
   </body>

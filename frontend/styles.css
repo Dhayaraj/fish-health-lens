@@ -25,6 +25,11 @@ h1 { font-size: 17px; letter-spacing: -.3px; }
 .intro h2 { margin-top: 12px; font-size: clamp(38px, 6vw, 72px); line-height: .98; letter-spacing: -3px; }
 .intro h2 em { color: var(--coral); font-style: normal; }
 .lede { max-width: 520px; margin: 24px 0 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.project-info { display: grid; grid-template-columns: minmax(230px, .75fr) 1.25fr; gap: 25px; margin-bottom: 18px; padding: 20px 24px; border: 1px solid var(--line); background: rgba(251, 252, 248, .72); }
+.project-info h3 { margin-top: 7px; font-size: 18px; line-height: 1.25; }
+.project-details { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 22px; align-content: center; }
+.project-details span { display: grid; gap: 3px; color: var(--muted); font-size: 12px; }
+.project-details b { color: var(--ink); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; }
 .workspace { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr); gap: 18px; }
 .upload-panel, .result-panel, .explanation-section { background: rgba(251, 252, 248, .82); border: 1px solid var(--line); }
 .upload-panel, .result-panel { min-height: 480px; padding: 26px; }
@@ -73,5 +78,6 @@ figcaption { margin-top: 9px; color: var(--muted); font-size: 11px; }
 .explanation-note { display: flex; gap: 12px; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .note-number { flex: 0 0 auto; width: 22px; height: 22px; display: grid; place-items: center; border: 1px solid var(--coral); border-radius: 50%; color: var(--coral); font-weight: 700; }
 .explanation-note p { margin: 0; }
+.project-footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; line-height: 1.6; text-align: center; }
 .hidden { display: none !important; }
-@media (max-width: 760px) { .shell { padding: 22px 18px 50px; } .intro { padding: 56px 0 34px; } .intro h2 { letter-spacing: -1.8px; } .workspace, .explanation-grid { grid-template-columns: 1fr; } .upload-panel, .result-panel { min-height: auto; } .empty-state { height: 240px; } .result-content { margin-top: 32px; } .status-pill { display: none; } }
+@media (max-width: 760px) { .shell { padding: 22px 18px 50px; } .intro { padding: 56px 0 34px; } .intro h2 { letter-spacing: -1.8px; } .project-info, .project-details, .workspace, .explanation-grid { grid-template-columns: 1fr; } .upload-panel, .result-panel { min-height: auto; } .empty-state { height: 240px; } .result-content { margin-top: 32px; } .status-pill { display: none; } }
